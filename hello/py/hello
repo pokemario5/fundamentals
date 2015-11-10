@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+import skilstak.colors as c
+
+
+
+
+
+print(c.cl + c.rc() +"Hello " + c.rc() + "world" + c.x)
+
+def plain(message):
+        """Clears the screen and prints'hello world'."""
+        print(c.clear + c.rc() + message + c.reset)
+
+def multi(message):
+    while True:
+        print(c.clear + c.multi(message))
+
+def color(message):
+    print(c.clear)
+    while True:
+        print(c.rc() + message + c.reset, end=" ")
+       
+if __name__== '__main__':
+    import sys
+
+    who = "world"
+    option = ""
+    message = ""
+
+    
+    if len(sys.argv) > 2:
+        option = sys.argv[1]
+        who = sys
