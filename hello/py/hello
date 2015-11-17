@@ -9,8 +9,8 @@ import skilstak.colors as c
 print(c.cl + c.rc() +"Hello " + c.rc() + "world" + c.x)
 
 def plain(message):
-        """Clears the screen and prints'hello world'."""
-        print(c.clear + c.rc() + message + c.reset)
+    """Clears the screen and prints'hello world'."""
+    print(c.clear + c.rc() + message + c.reset)
 
 def multi(message):
     while True:
@@ -31,4 +31,21 @@ if __name__== '__main__':
     
     if len(sys.argv) > 2:
         option = sys.argv[1]
-        who = sys
+        who = sys.argv[2]
+    elif len(sys.argv) == 2:
+        if sys.argv[1].startswith("-"):
+            option = sys.argv[1]
+        else:
+            who = sys.argv[1]
+    elif len(sys.argv) == 1:
+        message = sys.argv[0]
+
+    message = "hello " + who + " is gnarly"
+
+    if option == "-n":
+        color(message)
+    if option == "-m":
+        multi(message)
+    else:
+        plain(message)
+
