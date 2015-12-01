@@ -1,9 +1,17 @@
-#!/usr/bin/env/ python3
+#!/usr/bin/env python3
 import skilstak.colors as c
 
 def plain():
-    print(c.rc + "hello world")
-while True:
+    print(c.rc() + "hello world", end  = ":|")
+def multi():
+    print(c.multi("helo werld")) 
+    
+
+if __name__ == "__main__":
+
     plain()
+    multi()
+    plain()
+
 
     
