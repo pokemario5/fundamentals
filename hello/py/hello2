@@ -1,1 +1,9 @@
 #!/usr/bin/env/ python3
+import skilstak.colors as c
+
+def plain():
+    print(c.rc + "hello world")
+while True:
+    plain()
+
+    
